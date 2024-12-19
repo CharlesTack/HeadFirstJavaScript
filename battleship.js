@@ -1,6 +1,8 @@
-var location1 = 3; // static position for the moment until we add randomization
-var location2 = 4; // static position for the moment until we add randomization
-var location3 = 5; // static position for the moment until we add randomization
+var randomLoc = Math.floor(Math.random() * 5);
+var location1 = randomLoc; // static position for the moment until we add randomization
+var location2 = location1 + 1; // static position for the moment until we add randomization
+var location3 = location2 + 1; // static position for the moment until we add randomization
+
 
 var guess; // user's guess
 var hits = 0; // number of hits
@@ -27,5 +29,5 @@ while (isSunk == false ) {
         }
     }
 }
-var stats = "You took " + guesses + "guesses to sink the battleship, " + "which means your shooting accuracy was " + (3/guesses);
+var stats = "You took " + guesses + " guesses to sink the battleship, " + "which means your shooting accuracy was " + (3/guesses);
 alert(stats);
